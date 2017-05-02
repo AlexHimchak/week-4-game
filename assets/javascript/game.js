@@ -10,6 +10,9 @@ $(document).ready(function () {
         var num3 = Math.floor(Math.random() * 11 + 1);
         var num4 = Math.floor(Math.random() * 11 + 1);
         var numberOptions = [num1, num2, num3, num4];
+        $("#total-wins").text(wins);
+        $("#total-losses").text(losses);
+         $("#totalNumber").text(counter);
 
         function reset() {
                 targetNumber = Math.floor(Math.random() * 101 + 19);

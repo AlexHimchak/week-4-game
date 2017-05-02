@@ -3,6 +3,11 @@
 	height: 200px;
 	border-style: solid;
 }
+#container{
+	widows: 100%;
+	margin: auto;
+	height: 150px;
+}
 
 
 html {
@@ -39,8 +44,10 @@ h3 {
 	font-size: 50px;
 	color: black;
 	border-style: solid;
-	width: 35%;
-	height: 100px;
+	width: 30%;
+	float: left;
+	margin: auto;
+	
 	
 }
 
@@ -51,16 +58,20 @@ h4 {
 	color: black;
 	border-style: solid;
 	width: 30%;
+	float: left;
+	margin: auto;
+	margin-left: 10px;
 
 }
 
 h5 {
-	height: 50px;
+	font-size: 50px;
 	text-align: left;
-	background: teal;
-	font-size: 20px;
+	background: #FAEBD7;
 	color: black;
 	border-style: solid;
 	width: 20%;
-}
+	margin: auto;
+	float: left;
+
 }
