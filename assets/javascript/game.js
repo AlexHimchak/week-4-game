@@ -1,88 +1,88 @@
-$(document).ready(function () {
-        var targetNumber = Math.floor(Math.random() * 101 + 19);
-        var wins = 0;
-        var losses = 0;
-        var userTotal = 0;
-        $("#number-to-guess").text(targetNumber);
-        var counter = 0;
-        var num1 = Math.floor(Math.random() * 11 + 1);
-        var num2 = Math.floor(Math.random() * 11 + 1);
-        var num3 = Math.floor(Math.random() * 11 + 1);
-        var num4 = Math.floor(Math.random() * 11 + 1);
-        var numberOptions = [num1, num2, num3, num4];
-        $("#total-wins").text(wins);
-        $("#total-losses").text(losses);
-         $("#totalNumber").text(counter);
+$(document).ready(function() {
+    var targetNumber = Math.floor(Math.random() * 101 + 19);
+    var wins = 0;
+    var losses = 0;
+    var userTotal = 0;
+    $("#number-to-guess").text(targetNumber);
+    var counter = 0;
+    var num1 = Math.floor(Math.random() * 11 + 1);
+    var num2 = Math.floor(Math.random() * 11 + 1);
+    var num3 = Math.floor(Math.random() * 11 + 1);
+    var num4 = Math.floor(Math.random() * 11 + 1);
+    var numberOptions = [num1, num2, num3, num4];
+    $("#total-wins").text(wins);
+    $("#total-losses").text(losses);
+    $("#totalNumber").text(counter);
 
-        function reset() {
-                targetNumber = Math.floor(Math.random() * 101 + 19);
-                $("#number-to-guess").text(targetNumber);
-                num1 = Math.floor(Math.random() * 11 + 1);
-                num2 = Math.floor(Math.random() * 11 + 1);
-                num3 = Math.floor(Math.random() * 11 + 1);
-                num4 = Math.floor(Math.random() * 11 + 1);
-                numberOptions = [num1, num2, num3, num4];
-                counter = 0;
-                $("#totalNumber").text(counter);
+    function reset() {
+        targetNumber = Math.floor(Math.random() * 101 + 19);
+        $("#number-to-guess").text(targetNumber);
+        num1 = Math.floor(Math.random() * 11 + 1);
+        num2 = Math.floor(Math.random() * 11 + 1);
+        num3 = Math.floor(Math.random() * 11 + 1);
+        num4 = Math.floor(Math.random() * 11 + 1);
+        numberOptions = [num1, num2, num3, num4];
+        counter = 0;
+        $("#totalNumber").text(counter);
+    }
+    $("#GemOne").on("click", function() {
+        counter = counter + num1;
+        $("#totalNumber").text(counter);
+        if (counter === targetNumber) {
+            alert("You win!");
+            wins++;
+            $("#total-wins").text(wins);
+            reset();
+        } else if (counter >= targetNumber) {
+            alert("You lose!!");
+            losses++;
+            $("#total-losses").text(losses);
+            reset();
         }
-        $("#GemOne").on("click", function () {
-                counter = counter + num1;
-                $("#totalNumber").text(counter);
-                if (counter === targetNumber) {
-                        alert("You win!");
-                        wins++;
-                        $("#total-wins").text(wins);
-                        reset();
-                } else if (counter >= targetNumber) {
-                        alert("You lose!!");
-                        losses++;
-                        $("#total-losses").text(losses);
-                        reset();
-                }
-        });
-        $("#GemTwo").on("click", function () {
-                counter = counter + num2;
-                $("#totalNumber").text(counter);
-                if (counter === targetNumber) {
-                        alert("You win!");
-                        wins++;
-                        $("#total-wins").text(wins);
-                        reset();
-                } else if (counter >= targetNumber) {
-                        alert("You lose!!");
-                        losses++;
-                        $("#total-losses").text(losses);
-                        reset();
-                }
-        });
-        $("#GemThree").on("click", function () {
-                counter = counter + num3;
-                $("#totalNumber").text(counter);
-                if (counter === targetNumber) {
-                        alert("You win!");
-                        wins++;
-                        $("#total-wins").text(wins);
-                        reset();
-                } else if (counter >= targetNumber) {
-                        alert("You lose!!");
-                        losses++;
-                        $("#total-losses").text(losses);
-                        reset();
-                }
-        });
-        $("#GemFour").on("click", function () {
-                counter = counter + num4;
-                $("#totalNumber").text(counter);
-                if (counter === targetNumber) {
-                        alert("You win!");
-                        wins++;
-                        $("#total-wins").text(wins);
-                        reset();
-                } else if (counter >= targetNumber) {
-                        alert("You lose!!");
-                        losses++;
-                        $("#total-losses").text(losses);
-                        reset();
-                }
-        });
+    });
+    $("#GemTwo").on("click", function() {
+        counter = counter + num2;
+        $("#totalNumber").text(counter);
+        if (counter === targetNumber) {
+            alert("You win!");
+            wins++;
+            $("#total-wins").text(wins);
+            reset();
+        } else if (counter >= targetNumber) {
+            alert("You lose!!");
+            losses++;
+            $("#total-losses").text(losses);
+            reset();
+        }
+    });
+    $("#GemThree").on("click", function() {
+        counter = counter + num3;
+        $("#totalNumber").text(counter);
+        if (counter === targetNumber) {
+            alert("You win!");
+            wins++;
+            $("#total-wins").text(wins);
+            reset();
+        } else if (counter >= targetNumber) {
+            alert("You lose!!");
+            losses++;
+            $("#total-losses").text(losses);
+            reset();
+        }
+    });
+    $("#GemFour").on("click", function() {
+        counter = counter + num4;
+        $("#totalNumber").text(counter);
+        if (counter === targetNumber) {
+            alert("You win!");
+            wins++;
+            $("#total-wins").text(wins);
+            reset();
+        } else if (counter >= targetNumber) {
+            alert("You lose!!");
+            losses++;
+            $("#total-losses").text(losses);
+            reset();
+        }
+    });
 });
